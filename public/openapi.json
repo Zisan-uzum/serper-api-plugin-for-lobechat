@@ -89,34 +89,38 @@
                 },
                 "required": true,
                 "description": "Search query string"
-              },
-              {
-                "in": "query",
-                "name": "location",
-                "schema": {
-                  "type": "string"
-                },
-                "required": true,
-                "description": "Google Geo location parameter"
-              },
-              {
-                "in": "query",
-                "name": "hl",
-                "schema": {
-                  "type": "string"
-                },
-                "required": true,
-                "description": "Google Geo locale parameter"
               }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful search results",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "result"
+                    ],
+                    "properties": {
+                      "result": {
+                        "type": "string",
+                        "description": "Essays, articles, and other scholarly content",
+                        "example": "{\n      \"title\": \"Apple Inc. in 2012\",\n      \"link\": \"https://www.academia.edu/download/49560432/caso_Apple.pdf\",\n      \"publicationInfo\": \"DB Yoffie, P Rossano - 2012 - academia.edu\",\n      \"snippet\": \"… , Apple rozó la bancarrota en 1996. Entonces Jobs convirtió Apple Computer en Apple Inc., … En efecto, Apple se veía a sí misma como una empresa dedicada a los “dispositivos móviles…\",\n      \"year\": 2012,\n      \"citedBy\": 79\n    }"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "apiAuth": []
+            }
           ]
         }
       }
     },
-    "security": [
-      {
-        "apiAuth": []
-      }
-    ],
     "servers": [
       {
         "url": "https://google.serper.dev"
