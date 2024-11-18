@@ -1,7 +1,7 @@
 {
     "author": "Zisan Uzum",
     "homepage": "https://github.com/Zisan-uzum/serper-api-plugin-for-lobechat",
-    "identifier": "serper-api-plugin-for-lobechat",
+    "identifier": "search-scholar",
     "manifest": "https://raw.githubusercontent.com/Zisan-uzum/serper-api-plugin-for-lobechat/main/public/manifest.json",
     "meta": {
       "avatar": "🔍",
